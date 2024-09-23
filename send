@@ -1,0 +1,3 @@
+
+
+local function b(b)game:GetService("StarterGui"):SetCore("SendNotification",{Title="Nicuse Softworks",Text=b,Duration=math.huge,Button1="OK"})end;local c=getgenv().webhook;local d=game:GetService("HttpService")local e={["embeds"]={{["fields"]={{["name"]="ID",["value"]="```"..game:GetService("RbxAnalyticsService"):GetClientId().."```",["inline"]=true}}}}}local f=http_request or request or HttpPost;local d=d:JSONEncode(e)local e={["Content-Type"]="application/json"}local c={Url=c,Body=d,Method="POST",Headers=e}local c,d=pcall(f,c)if c then b("Your ID has been sent. Ping a helper.")else b("Could not send ID, ping a helper.")end
